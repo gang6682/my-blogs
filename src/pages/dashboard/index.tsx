@@ -1,7 +1,7 @@
 const Dashboard: React.FC = () => {
     return (
         <div>
-            首页
+            首页123
         </div>
     )
 }
