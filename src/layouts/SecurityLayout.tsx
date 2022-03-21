@@ -7,6 +7,8 @@ import TestReactMemo from '../pages/demo/TestReactMemo';
 import TestUseMemo from '../pages/demo/TestUseMemo';
 import TestReactClass from '../pages/demo/TestReactClass';
 import TestReactForceUpdate from '../pages/demo/TestReactForceUpdate';
+import Login from '../pages/user/Index';
+import ReduxDemo from '../pages/redux';
 
 function SecurityLayout() {
     let routes: RouteObject[] = [
@@ -14,11 +16,13 @@ function SecurityLayout() {
             path: "/",
             element: <TestLayout />,
             children: [
+                { path: "", element: <Login /> },
                 { path: "demo/testUseCallback", element: <TestUseCallback /> },
                 { path: "demo/reactMemo", element: <TestReactMemo />, },
                 { path: "demo/useMemo", element: <TestUseMemo />, },
                 { path: "demo/testReactClass", element: <TestReactClass />, },
                 { path: "demo/testReactForceUpdate", element: <TestReactForceUpdate />, },
+                { path: "redux", element: <ReduxDemo />, },
             ],
         },
         {
@@ -37,6 +41,8 @@ function SecurityLayout() {
                 <Link to="/demo/useMemo">Test useMemo</Link>|
                 <Link to="/demo/testReactClass">Test React Class</Link>|
                 <Link to="/demo/testReactForceUpdate">Test Force Update</Link>|
+                <br></br>
+                <Link to="/redux">redux</Link>|
             </div>
             <div>
                 {routers}
